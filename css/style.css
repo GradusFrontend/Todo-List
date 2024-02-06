@@ -1,0 +1,113 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+img {
+    max-width: 100%;
+}
+
+.wrap {
+    margin: 0 auto;
+    width: 1250px;
+    border-top: 2px solid #00000040;
+}
+
+h1 {
+    padding-top: 60px;
+    padding-bottom: 22px;
+    font-family: Gilroy;
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 59px;
+    letter-spacing: 0em;
+    text-align: center;
+}
+
+form {
+    text-align: center;
+    margin-bottom: 50px;
+
+    #inp {
+        padding: 10px 60px 10px 20px;
+
+        font-family: Gilroy;
+        font-size: 20px;
+        font-weight: 600;
+        line-height: 20px;
+        letter-spacing: 0em;
+        text-align: left;
+        border: 2px solid #007FFF;
+        border-radius: 10px;
+        box-shadow: 0 0 4px 1px #0080ff48;
+        outline: 0;
+    }
+
+    #submit {
+        cursor: pointer;
+        padding: 10px 60px;
+        font-family: Gilroy;
+        font-size: 22px;
+        font-weight: 500;
+        line-height: 22px;
+        letter-spacing: 0em;
+        text-align: center;
+        background-color: #007FFF;
+        border: 1px solid #007FFF;
+        color: white;
+        border-radius: 10px;
+        transition: .3s ease;
+        box-shadow: 0 0 4px 1px #0080ff48;
+    }
+
+    #submit:hover {
+        background-color: #0252a2;
+        scale: 1.04;
+    }
+}
+
+.wrap {
+    padding: 20px 50px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 25px;
+    row-gap: 20px;
+}
+
+.todo {
+    border: 1px solid #007FFF;
+    border-radius: 10px;
+    background-color: #F0F0F0;
+    padding: 20px 25px;
+    position: relative;
+
+    .delete {
+        position: absolute;
+        top: 20px;
+        right: 25px;
+        cursor: pointer;
+        width: 18px;
+    }
+
+    .todo-text {
+        font-family: Gilroy;
+        font-size: 20px;
+        font-weight: 600;
+        line-height: 22px;
+        letter-spacing: 0em;
+        text-align: left;
+        padding-bottom: 15px;
+    }
+
+    .time {
+        font-family: Gilroy;
+        font-size: 14px;
+        font-style: italic;
+        font-weight: 500;
+        line-height: 17px;
+        letter-spacing: 0em;
+        text-align: left;
+        color: rgba(0, 0, 0, 0.525);
+    }
+}
