@@ -51,21 +51,31 @@ function reloadTodo(arr, place) {
         timeText.innerHTML = item.time
         deleteBtn.src = './cross.svg'
 
+        todoText.onclick = () => {
+            item.completed = true
+            todoText.style.textDecorationLine = 'line-through'
+            todoText.style.textDecorationColor = 'blue'
+            todoText.style.textDecorationThickness = '2px'
+        }
+
+        if(item.completed) {
+            todoText.style.textDecorationLine = 'line-through'
+            todoText.style.textDecorationColor = 'blue'
+            todoText.style.textDecorationThickness = '2px'
+        }
+
         deleteBtn.onclick = () => {
             todo.remove()
             arr.splice(arr.indexOf(item), 1)
         }
 
+
         todo.ondblclick = () => {
             let changeTitle = prompt('ghbs')
-            item.title = changeTitle
-            todoText.innerHTML = item.title
-        }
-        todoText.onclick = () => {
-            todoText.style.textDecorationLine = 'line-through'
-            todoText.style.textDecorationColor = 'blue'
-            todoText.style.textDecorationThickness = '2px'
-            item.completed = true
+            if(changeTitle.trim().length > 0) {
+                item.title = changeTitle
+                todoText.innerHTML = item.title
+            }
         }
     }
 }
